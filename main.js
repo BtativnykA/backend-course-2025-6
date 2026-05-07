@@ -13,7 +13,6 @@ program
 
 program.parse(process.argv);
 const options = program.opts();
-
 const app = express();
 const PORT = options.port;
 const HOST = options.host;
