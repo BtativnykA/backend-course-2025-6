@@ -1,0 +1,213 @@
+{
+  "info": {
+    "_postman_id": "aea0aa6a-83b2-4a42-9215-77c1cbde4ddc",
+    "name": "Inventory API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54265134",
+    "_collection_link": "https://go.postman.co/collection/54265134-aea0aa6a-83b2-4a42-9215-77c1cbde4ddc?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "inventory_name",
+              "value": "Ноутбук",
+              "type": "text",
+              "uuid": "bef96471-bef2-4f1d-b955-5526a23a423f"
+            },
+            {
+              "key": "description",
+              "value": "Робочий ноутбук",
+              "type": "text",
+              "uuid": "bdb701d3-5b82-4eed-92a2-04a2c07d44dc"
+            },
+            {
+              "key": "photo",
+              "type": "file",
+              "uuid": "91a3ef0e-4c6f-42b5-8af9-0359b7c64a53",
+              "src": "postman-cloud:///1f149f2b-1974-4470-b078-39e8bfc08eb6"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/inventory",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "inventory"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get One",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/inventory/ID",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "inventory",
+            "ID"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Item",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"new\",\"description\":\"new\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/inventory/ID",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "inventory",
+            "ID"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Photo",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/inventory/ID/photo",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "inventory",
+            "ID",
+            "photo"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Photo",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "photo",
+              "type": "file",
+              "uuid": "00b96451-f5a2-4f2a-a0be-70a0987696a5",
+              "value": null
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/inventory/ID/photo",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "inventory",
+            "ID",
+            "photo"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/inventory/ID",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "inventory",
+            "ID"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/search",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "search"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
